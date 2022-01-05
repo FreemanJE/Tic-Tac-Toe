@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 5rem;
+  background-color: skyblue
+}
+.control h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-family: monospace;  
+}
+
+.control h2 {
+  
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem
+}
+.control #btn1, #btn3{
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  margin: 0 1rem 1rem;  
+  font-weight: bold;
+  border: solid blue;
+  box-shadow: 0.5rem 0.5rem grey;    
+}
+
+.boardContainer {
+  width: 40%;
+  padding-top: 40%; /* 1:1 Aspect Ratio */
+  min-width: 40rem;
+  margin: 0 auto;
+  position: relative;
+  
+}
+.boardContainer p {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.message {
+  font-size: 3rem;
+  position: absolute;
+  inset: 0;
+  width: 30rem;
+  text-align: center;
+  margin: 10rem auto;
+}
+
+.board{
+  margin-top: 5rem;
+  min-height: 40rem;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: black;
+  grid-gap: 3px;
+  border: 0.2rem solid black;
+  border-radius: 2rem;
+  box-shadow: 0 1rem .9rem 3rem rgb(35, 135, 165);
+  
+  
+}
+
+.square{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.circle{
+  position: absolute;
+  inset: 0;
+  margin: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 3rem solid red
+}
+
+
+.cross {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cross:before, .cross:after {
+ content: "";
+ position: absolute;
+ z-index: -1;
+ background: rgb(0, 4, 221);
+}
+
+.cross:before {
+ left: calc(50% - 1.5rem);
+ width: 3rem;
+ height: 100%;
+ transform: rotate(45deg);
+}
+
+.cross:after {
+ top: calc(50% - 1.5rem);
+ height: 3rem;
+ width: 100%;
+ transform: rotate(45deg);
+}
